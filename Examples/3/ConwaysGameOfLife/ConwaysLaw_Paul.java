@@ -43,20 +43,20 @@ public class ConwaysLaw_Paul {
 		// the Scanner when we're done using it (even if your program
 
 
-        Integer[][] source = new Integer[10][10]; // [column][row]
+        
         
 
 		try (Scanner input = new Scanner(System.in)){
 			// Next, read the number of test cases
 			int testCases = Integer.parseInt(input.nextLine());
             
-
-			
 			// Now perform each test case. This for loop is the last part
 			// common to all problems; the contents of this for loop will
 			// change depending on what problem you're solving.
 			for(int testcase = 0; testcase < testCases; testcase++) {
 				
+                Integer[][] source = new Integer[10][10]; // [column][row]
+                
                 int iterations = Integer.parseInt(input.nextLine());
 
                 
