@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -44,7 +43,8 @@ public class ConwaysLaw_Paul {
 		// the Scanner when we're done using it (even if your program
 
 
-        Integer[][] matrix = new Integer[10][10]; // [column][row]
+        Integer[][] source = new Integer[10][10]; // [column][row]
+        
 
 		try (Scanner input = new Scanner(System.in)){
 			// Next, read the number of test cases
@@ -64,26 +64,78 @@ public class ConwaysLaw_Paul {
                     String row = input.nextLine();
                     // 0000000000
                     for (int charsRead = 0; charsRead < 10; charsRead++) {
-                        matrix[charsRead][matrixRow] = Integer.parseInt(row.charAt(charsRead) + "");
+                        source[charsRead][matrixRow] = Integer.parseInt(row.charAt(charsRead) + "");
                         //System.out.println("read " + matrixRow + "," + charsRead  + ": " + row.charAt(charsRead));
                     }
                    
                 }
 
-                System.out.println("character at 5,3:" + matrix[5][3]);
+                //System.out.println("character at 5,3:" + matrix[5][3]);
                 //System.out.println(Arrays.toString(matrix[3]));
-                print(matrix);
-
+                //System.out.println("Read source:");
+                //print(source);
+                /* 
+                // Sample prints to exercise #adjacentCels 
+                //////
                 // Find adjacent for column 5:
                 for (int i = 0; i < matrix.length; i++) {
                     System.out.println("adjacent to 5," + i + ":" +adjacentCells(matrix, 5, i));
                 }
                 
-
                 // Find adjacent for row 5:
                 for (int i = 0; i < matrix.length; i++) {
                     System.out.println("adjacent to " + i + ",5:" +adjacentCells(matrix, i, 5));
                 }
+                */
+
+                // For each iteration, walk the matrix, finding adjacents and writing to the target
+                // 
+                /** 
+                In each generation:
+                    Any live cell adjacent to one or zero live cells dies (from loneliness).
+                    Any live cell adjacent to two or three live cells lives.
+                    Any live cell adjacent to four or more live cells dies (from overcrowding).
+                    Any dead cell adjacent to exactly three live cells becomes alive (through reproduction).
+                **/
+                for (int iterationCounter = 0; iterationCounter < iterations; iterationCounter++) {               
+                    Integer[][] target = new Integer[10][10]; // [column][row]
+                    for (int i = 0; i < source.length; i++) {
+                        for (int j = 0; j < source[i].length; j++) {
+                            int adjacent = adjacentCells(source, i,j);
+
+                            if (source[i][j] == 1) {
+                                // source is alive
+                                if (adjacent <= 1) {
+                                    // dies from lonliness
+                                    target[i][j] = 0;
+                                } else if (adjacent == 3 || adjacent == 2) {
+                                    // stays
+                                    target[i][j] = 1;
+                                } else if (adjacent >= 4) {
+                                    // overcrowded
+                                    target[i][j] = 0;
+                                }
+                            } else {
+                                // source is dead, but can become alive
+                                if (adjacent == 3) {
+                                    target[i][j] = 1;
+                                } else {
+                                    target[i][j] = 0;
+                                }
+                            }
+//                                throw new IllegalStateException("unknown state:" + i + "," + j + "=" + source[i][j] + " with adjacent = " + adjacent);
+                        }
+                        
+                    }
+                    source = target;
+                    //System.out.println("::Post Iter " + iterationCounter);
+                    //print(source);
+                }
+                // Print after all iterations
+                //
+                print(source);
+            
+                
                 
 			}
 		}
