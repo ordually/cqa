@@ -9,6 +9,10 @@ https://lmcodequestacademy.com
 Find and filter problems: https://lmcodequestacademy.com/quest
 
 # More on Lockheed Martin
+## Videos
+https://www.youtube.com/watch?v=eNKCVAgDYaA&t=65s
+https://www.youtube.com/watch?v=v-Kgl-I0MOc&t=13s
+https://www.youtube.com/watch?v=Gd53rZs5fsY
 ## Space
 ### Mars Retrieval
 
@@ -24,4 +28,5 @@ Inside the Skunk Works Podcast
 https://podcasts.apple.com/us/podcast/inside-skunk-works/id1350627500
 
 Space Maker
+https://podcasts.apple.com/us/podcast/lockheed-martin-space-makers/id1579953069
 
