@@ -11,6 +11,8 @@ Find and filter problems: https://lmcodequestacademy.com/quest
 # More on Lockheed Martin
 ## Videos
 
+[<img src="https://img.youtube.com/vi/eNKCVAgDYaA/maxresdefault.jpg" width="50%">](https://youtu.be/eNKCVAgDYaA&t=65s)
+
 <video src='https://www.youtube.com/watch?v=eNKCVAgDYaA&t=65s' width=180 ></video>
 
 https://www.youtube.com/watch?v=v-Kgl-I0MOc&t=13s
