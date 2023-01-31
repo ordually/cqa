@@ -9,7 +9,7 @@ https://lmcodequestacademy.com
 Find and filter problems: https://lmcodequestacademy.com/quest
 
 # More on Lockheed Martin
-[Vector Star News]([https://www.lockheedmartin.com/en-us/news/features/vector-star.html)
+[Vector Star News](https://www.lockheedmartin.com/en-us/news/features/vector-star.html)
 
 ## Videos
 
