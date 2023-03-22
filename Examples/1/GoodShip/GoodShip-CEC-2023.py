@@ -5,7 +5,10 @@ import math
 import string
 
 ## windows hack
-sys.stdin = open("1.in")
+##
+## //TODO: Has anyone found a way thru to pass stdin to the python?
+##
+#sys.stdin = open("1.in")
 
 # Always start with reading in the number
 # of test cases from standard input. The
@@ -60,6 +63,8 @@ for caseNum in range(cases):
         if e in shipyardData:
             result.remove(e)
 
+    result.sort()
+    
     for r in result:
         print(r)
 
