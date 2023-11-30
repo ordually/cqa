@@ -18,6 +18,16 @@
 1. It's an Enigma (2018)
 2. Codebreaker Returned (2022)
 
+## Object Oriented
+Problems that lend themselves to OO design
+
+Quoting Brett Reynolds: 
+> Many of our [maze-solving problems](https://lmcodequestacademy.com/tag/mazes) can make use of classes in order to remember the paths taken through the maze, to avoid overlapping or backtracking. These classes can evaluate for themselves the possible "next steps" and also report their lengths and paths, as necessary. These problems do tend to be among our hardest, however.
+	
+* [LMCoin](https://lmcodequestacademy.com/problem/lmcoin) features a simplified blockchain algorithm, similar to those used by cryptocurrencies. A class could be created to represent a single "block" within the chain.
+* [Past is Prologue](https://lmcodequestacademy.com/problem/past-is-prologue) asks you to build a database from which certain information can be extracted. Each item in the database could be represented by a class, responsible for parsing its own data and assisting with analysis of that data.
+* Some of our more difficult problems, such as [Flight Finder](https://lmcodequestacademy.com/problem/flight-finder), have you read in a large amount of data, which you then have to use to solve a problem (in that case, finding a flight itinerary that meets strict criteria). As with the previous points, you could use classes to store that data and assist with searching through it.
+
 # Tips 
 ## Rounding
 Round Half Way Away from Zero (0.5->1, -0.5->-1)
